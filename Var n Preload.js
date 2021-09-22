@@ -214,91 +214,91 @@ var PlayersX;
 var PlayersY;
 var SadBombActive = false;
 function preload() {
-    this.load.image('wall', 'http://labs.phaser.io/assets/sprites/gem.png')
-    this.load.image('barriers', 'http://labs.phaser.io/assets/sprites/crate32.png')
-    this.load.image('tinted', 'http://labs.phaser.io/assets/sprites/crate32.png')
-    this.load.image('pit', 'http://labs.phaser.io/assets/sprites/loop.png')
-    this.load.image('Room', 'http://labs.phaser.io/assets/sprites/steelbox.png')
-    this.load.image('RoomIn', 'http://labs.phaser.io/assets/sprites/box-item-boxed.png')
+    this.load.image('wall', 'https://labs.phaser.io/assets/sprites/gem.png')
+    this.load.image('barriers', 'https://labs.phaser.io/assets/sprites/crate32.png')
+    this.load.image('tinted', 'https://labs.phaser.io/assets/sprites/crate32.png')
+    this.load.image('pit', 'https://labs.phaser.io/assets/sprites/loop.png')
+    this.load.image('Room', 'https://labs.phaser.io/assets/sprites/steelbox.png')
+    this.load.image('RoomIn', 'https://labs.phaser.io/assets/sprites/box-item-boxed.png')
     //-----------------------------------------------------------
-    this.load.image('sky', 'http://labs.phaser.io/src/games/firstgame/assets/sky.png');
-    this.load.image('Labyrinth 2', 'http://labs.phaser.io/assets/skies/sky3.png');
-    this.load.image('Labyrinth 3', 'http://labs.phaser.io/assets/skies/cavern1.png');
-    this.load.image('Labyrinth 4', 'http://labs.phaser.io/assets/skies/cavern2.png');
-    this.load.image('Labyrinth 5', 'http://labs.phaser.io/assets/skies/nebula.jpg');
-    this.load.image('Labyrinth 6', 'http://labs.phaser.io/assets/skies/space.jpg');
-    this.load.image('space', 'http://labs.phaser.io/assets/skies/space.jpg');
-    this.load.image('bomb', 'http://labs.phaser.io/src/games/firstgame/assets/bomb.png');
-    this.load.image('Spec', 'http://labs.phaser.io/assets/sprites/rain.png');
-    this.load.image('menutext', 'http://labs.phaser.io/assets/sprites/button-text.png');
-    this.load.image('friendlyBOMB', 'http://labs.phaser.io/assets/sprites/red_ball.png')
-    this.load.image('activeBOMB', 'http://labs.phaser.io/assets/sprites/shinyball.png')
+    this.load.image('sky', 'https://labs.phaser.io/src/games/firstgame/assets/sky.png');
+    this.load.image('Labyrinth 2', 'https://labs.phaser.io/assets/skies/sky3.png');
+    this.load.image('Labyrinth 3', 'https://labs.phaser.io/assets/skies/cavern1.png');
+    this.load.image('Labyrinth 4', 'https://labs.phaser.io/assets/skies/cavern2.png');
+    this.load.image('Labyrinth 5', 'https://labs.phaser.io/assets/skies/nebula.jpg');
+    this.load.image('Labyrinth 6', 'https://labs.phaser.io/assets/skies/space.jpg');
+    this.load.image('space', 'https://labs.phaser.io/assets/skies/space.jpg');
+    this.load.image('bomb', 'https://labs.phaser.io/src/games/firstgame/assets/bomb.png');
+    this.load.image('Spec', 'https://labs.phaser.io/assets/sprites/rain.png');
+    this.load.image('menutext', 'https://labs.phaser.io/assets/sprites/button-text.png');
+    this.load.image('friendlyBOMB', 'https://labs.phaser.io/assets/sprites/red_ball.png')
+    this.load.image('activeBOMB', 'https://labs.phaser.io/assets/sprites/shinyball.png')
     //-----------------------------------------------------------
-    this.load.image('diamond', 'http://labs.phaser.io/assets/sprites/diamond.png');
-    this.load.image('bullet', 'http://labs.phaser.io/assets/sprites/bullets/bullet7.png');
-    this.load.image('Wabbit', 'http://labs.phaser.io/assets/sprites/wabbit.png');
-    this.load.image('mine', 'http://labs.phaser.io/assets/sprites/mine.png');
-    this.load.image('Slime', 'http://labs.phaser.io/assets/sprites/slime.png');
-    this.load.image('Gun', 'http://labs.phaser.io/assets/sprites/player_handgun.png');
-    this.load.image('fly', 'http://labs.phaser.io/assets/sprites/wasp.png');
-    this.load.image('flyshoot', 'http://labs.phaser.io/assets/sprites/wasp.png');
-    this.load.image('clotty', 'http://labs.phaser.io/assets/sprites/mushroom2.png');
-    this.load.image('Boss', 'http://labs.phaser.io/assets/sprites/hotdog.png');
-    this.load.image('Gurglings', 'http://labs.phaser.io/assets/sprites/brain.png');
-    this.load.image('Chub', 'http://labs.phaser.io/assets/sprites/ghost.png');
-    this.load.image('Gurdy', 'http://labs.phaser.io/assets/sprites/ra_dont_crack_under_pressure.png');
-    this.load.image('Loki', 'http://labs.phaser.io/assets/sprites/darkwing_crazy.png');
-    this.load.image('MulliBoom', 'http://labs.phaser.io/assets/sprites/clown.png');
-    this.load.image('Gusher', 'http://labs.phaser.io/assets/sprites/default.png');
-    this.load.image('FrowningGaper', 'http://labs.phaser.io/assets/sprites/default.png');
-    this.load.image('Globins', 'http://labs.phaser.io/assets/sprites/default.png');
-    this.load.image('Maggot', 'http://labs.phaser.io/assets/sprites/default.png');
-    this.load.image('Charger', 'http://labs.phaser.io/assets/sprites/default.png');
-    this.load.image('Horf', 'http://labs.phaser.io/assets/sprites/default.png');
-    this.load.image('Maws', 'http://labs.phaser.io/assets/sprites/default.png');
-    this.load.image('RedMaws', 'http://labs.phaser.io/assets/sprites/default.png');
-    this.load.image('MomLeg', 'http://labs.phaser.io/assets/sprites/gameboy_seize_color_40x60.png');
+    this.load.image('diamond', 'https://labs.phaser.io/assets/sprites/diamond.png');
+    this.load.image('bullet', 'https://labs.phaser.io/assets/sprites/bullets/bullet7.png');
+    this.load.image('Wabbit', 'https://labs.phaser.io/assets/sprites/wabbit.png');
+    this.load.image('mine', 'https://labs.phaser.io/assets/sprites/mine.png');
+    this.load.image('Slime', 'https://labs.phaser.io/assets/sprites/slime.png');
+    this.load.image('Gun', 'https://labs.phaser.io/assets/sprites/player_handgun.png');
+    this.load.image('fly', 'https://labs.phaser.io/assets/sprites/wasp.png');
+    this.load.image('flyshoot', 'https://labs.phaser.io/assets/sprites/wasp.png');
+    this.load.image('clotty', 'https://labs.phaser.io/assets/sprites/mushroom2.png');
+    this.load.image('Boss', 'https://labs.phaser.io/assets/sprites/hotdog.png');
+    this.load.image('Gurglings', 'https://labs.phaser.io/assets/sprites/brain.png');
+    this.load.image('Chub', 'https://labs.phaser.io/assets/sprites/ghost.png');
+    this.load.image('Gurdy', 'https://labs.phaser.io/assets/sprites/ra_dont_crack_under_pressure.png');
+    this.load.image('Loki', 'https://labs.phaser.io/assets/sprites/darkwing_crazy.png');
+    this.load.image('MulliBoom', 'https://labs.phaser.io/assets/sprites/clown.png');
+    this.load.image('Gusher', 'https://labs.phaser.io/assets/sprites/default.png');
+    this.load.image('FrowningGaper', 'https://labs.phaser.io/assets/sprites/default.png');
+    this.load.image('Globins', 'https://labs.phaser.io/assets/sprites/default.png');
+    this.load.image('Maggot', 'https://labs.phaser.io/assets/sprites/default.png');
+    this.load.image('Charger', 'https://labs.phaser.io/assets/sprites/default.png');
+    this.load.image('Horf', 'https://labs.phaser.io/assets/sprites/default.png');
+    this.load.image('Maws', 'https://labs.phaser.io/assets/sprites/default.png');
+    this.load.image('RedMaws', 'https://labs.phaser.io/assets/sprites/default.png');
+    this.load.image('MomLeg', 'https://labs.phaser.io/assets/sprites/gameboy_seize_color_40x60.png');
     //-----------------------------------------------------------
-    this.load.image('HPup', 'http://labs.phaser.io/assets/sprites/firstaid.png');
-    this.load.image('SoulH', 'http://labs.phaser.io/assets/sprites/orb-blue.png');
-    this.load.image('HeartofSin', 'http://labs.phaser.io/assets/sprites/orb-red.png');
-    this.load.image('star', 'http://labs.phaser.io/assets/sprites/bluebar.png');
-    this.load.image('Coin', 'http://labs.phaser.io/assets/sprites/melon.png');
-    this.load.image('Key', 'http://labs.phaser.io/assets/sprites/pineapple.png');
+    this.load.image('HPup', 'https://labs.phaser.io/assets/sprites/firstaid.png');
+    this.load.image('SoulH', 'https://labs.phaser.io/assets/sprites/orb-blue.png');
+    this.load.image('HeartofSin', 'https://labs.phaser.io/assets/sprites/orb-red.png');
+    this.load.image('star', 'https://labs.phaser.io/assets/sprites/bluebar.png');
+    this.load.image('Coin', 'https://labs.phaser.io/assets/sprites/melon.png');
+    this.load.image('Key', 'https://labs.phaser.io/assets/sprites/pineapple.png');
     //-----------------------------------------------------------
-    this.load.image('peper', 'http://labs.phaser.io/assets/sprites/pepper.png');
-    this.load.image('Blaser', 'http://labs.phaser.io/assets/sprites/rgblaser.png');
-    this.load.image('breakfast', 'http://labs.phaser.io/assets/sprites/apple.png');
-    this.load.image('quarter', 'http://labs.phaser.io/assets/sprites/purple_ball.png');
-    this.load.image('heart', 'http://labs.phaser.io/assets/sprites/tomato.png');
-    this.load.image('pact', 'http://labs.phaser.io/assets/sprites/default.png');
-    this.load.image('scapular', 'http://labs.phaser.io/assets/sprites/yellow_ball.png');
-    this.load.image('tri-shot', 'http://labs.phaser.io/assets/sprites/crate32.png');
-    this.load.image('Hangman', 'http://labs.phaser.io/assets/sprites/onion.png');
-    this.load.image('spec', 'http://labs.phaser.io/assets/sprites/bullets/bullet9.png');
-    this.load.image('belt', 'http://labs.phaser.io/assets/sprites/blue_ball.png');
-    this.load.image('mark', 'http://labs.phaser.io/assets/sprites/enemy-bullet.png');
-    this.load.image('sadonion', 'http://labs.phaser.io/assets/sprites/onion.png');
-    this.load.image('skeleKey', 'http://labs.phaser.io/assets/sprites/bullet.png');
-    this.load.image('binky', 'http://labs.phaser.io/assets/sprites/eyes.png');
-    this.load.image('pjs', 'http://labs.phaser.io/assets/sprites/phaser-dude.png');
-    this.load.image('spoon', 'http://labs.phaser.io/assets/sprites/arrow.png');
-    this.load.image('deadDove', 'http://labs.phaser.io/assets/sprites/pepper.png');
-    this.load.image('holyGrail', 'http://labs.phaser.io/assets/sprites/thrust_ship.png');
-    this.load.image('TheBody', 'http://labs.phaser.io/assets/sprites/orb-blue.png');
-    this.load.image('Robes', 'http://labs.phaser.io/assets/sprites/orange-cat1.png');
-    this.load.image('SadBomb', 'http://labs.phaser.io/assets/sprites/red_ball.png');
+    this.load.image('peper', 'https://labs.phaser.io/assets/sprites/pepper.png');
+    this.load.image('Blaser', 'https://labs.phaser.io/assets/sprites/rgblaser.png');
+    this.load.image('breakfast', 'https://labs.phaser.io/assets/sprites/apple.png');
+    this.load.image('quarter', 'https://labs.phaser.io/assets/sprites/purple_ball.png');
+    this.load.image('heart', 'https://labs.phaser.io/assets/sprites/tomato.png');
+    this.load.image('pact', 'https://labs.phaser.io/assets/sprites/default.png');
+    this.load.image('scapular', 'https://labs.phaser.io/assets/sprites/yellow_ball.png');
+    this.load.image('tri-shot', 'https://labs.phaser.io/assets/sprites/crate32.png');
+    this.load.image('Hangman', 'https://labs.phaser.io/assets/sprites/onion.png');
+    this.load.image('spec', 'https://labs.phaser.io/assets/sprites/bullets/bullet9.png');
+    this.load.image('belt', 'https://labs.phaser.io/assets/sprites/blue_ball.png');
+    this.load.image('mark', 'https://labs.phaser.io/assets/sprites/enemy-bullet.png');
+    this.load.image('sadonion', 'https://labs.phaser.io/assets/sprites/onion.png');
+    this.load.image('skeleKey', 'https://labs.phaser.io/assets/sprites/bullet.png');
+    this.load.image('binky', 'https://labs.phaser.io/assets/sprites/eyes.png');
+    this.load.image('pjs', 'https://labs.phaser.io/assets/sprites/phaser-dude.png');
+    this.load.image('spoon', 'https://labs.phaser.io/assets/sprites/arrow.png');
+    this.load.image('deadDove', 'https://labs.phaser.io/assets/sprites/pepper.png');
+    this.load.image('holyGrail', 'https://labs.phaser.io/assets/sprites/thrust_ship.png');
+    this.load.image('TheBody', 'https://labs.phaser.io/assets/sprites/orb-blue.png');
+    this.load.image('Robes', 'https://labs.phaser.io/assets/sprites/orange-cat1.png');
+    this.load.image('SadBomb', 'https://labs.phaser.io/assets/sprites/red_ball.png');
     //-----------------------------------------------------------
-    this.load.audio('BC', 'http://labs.phaser.io/assets/audio/SoundEffects/boss_hit.wav');
-    this.load.audio('boom', 'http://labs.phaser.io/assets/audio/SoundEffects/explosion.mp3');
-    this.load.audio('playerded', 'http://labs.phaser.io/assets/audio/SoundEffects/player_death.wav')
-    this.load.audio('pickup', 'http://labs.phaser.io/assets/audio/SoundEffects/pickup.wav');
-    this.load.audio('bump', 'http://labs.phaser.io/assets/audio/SoundEffects/need_cells.wav');
-    this.load.audio('coingathered', 'http://labs.phaser.io/assets/audio/SoundEffects/key.wav');
-    this.load.audio('bossded', 'http://labs.phaser.io/assets/audio/SoundEffects/sentry_explode.wav');
-    this.load.audio('pew', 'http://labs.phaser.io/assets/audio/SoundEffects/pistol.wav');
-    this.load.audio('pewpewpew', 'http://labs.phaser.io/assets/audio/SoundEffects/shotgun.wav');
-    this.load.spritesheet('dude', 'http://labs.phaser.io/src/games/firstgame/assets/dude.png', { frameWidth: 32, frameHeight: 48 });
+    this.load.audio('BC', 'https://labs.phaser.io/assets/audio/SoundEffects/boss_hit.wav');
+    this.load.audio('boom', 'https://labs.phaser.io/assets/audio/SoundEffects/explosion.mp3');
+    this.load.audio('playerded', 'https://labs.phaser.io/assets/audio/SoundEffects/player_death.wav')
+    this.load.audio('pickup', 'https://labs.phaser.io/assets/audio/SoundEffects/pickup.wav');
+    this.load.audio('bump', 'https://labs.phaser.io/assets/audio/SoundEffects/need_cells.wav');
+    this.load.audio('coingathered', 'https://labs.phaser.io/assets/audio/SoundEffects/key.wav');
+    this.load.audio('bossded', 'https://labs.phaser.io/assets/audio/SoundEffects/sentry_explode.wav');
+    this.load.audio('pew', 'https://labs.phaser.io/assets/audio/SoundEffects/pistol.wav');
+    this.load.audio('pewpewpew', 'https://labs.phaser.io/assets/audio/SoundEffects/shotgun.wav');
+    this.load.spritesheet('dude', 'https://labs.phaser.io/src/games/firstgame/assets/dude.png', { frameWidth: 32, frameHeight: 48 });
 };
 function create() {
     basement1 = this.physics.add.group();
